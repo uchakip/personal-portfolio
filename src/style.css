@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+p.typing {
+  border-right: solid 3px orange;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.70);
+  margin: 0 auto;
+  max-width: 100%; /* Set a maximum width to limit the paragraph's width on larger screens */
+}
+
+/* Animation for larger screens */
+.css-typing p {
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Animation */
+.css-typing p:nth-child(1) {
+  width: 100%;
+  -webkit-animation: type 3s steps(100, end);
+  animation: type 4s steps(100, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  
+}
+
+.css-typing p:nth-child(2) {
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: type2 6s steps(100, end);
+  animation: type2 6s steps(100, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: type2 6s steps(100, end);
+  animation: type2 6s steps(100, end);
+  -webkit-animation-delay: 4s;
+  animation-delay: 8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css-typing p:nth-child(4) {
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: type2 6s steps(100, end);
+  animation: type2 6s steps(100, end);
+  -webkit-animation-delay: 6s;
+  animation-delay: 12s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css-typing p:nth-child(5) {
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: type2 6s steps(100, end);
+  animation: type2 6s steps(100, end);
+  -webkit-animation-delay: 8s;
+  animation-delay: 16s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes type {
+  0% {width: 0;}
+  99.9% {border-right: .15em solid orange;}
+  100% {border: none;}
+}
+
+@keyframes type2 {
+  0% {width: 0;}
+  1% {opacity: 1;}
+  99.9% {border-right: .15em solid orange;}
+  100% {border: none; opacity: 1;}
+}
+
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+@media screen and (max-width: 1700px ) {
+  .css-typing p {
+    white-space: normal;
+    overflow: visible;
+  }
+
+  .css-typing p {
+    animation: none;
+    border: none;
+  }
+}
